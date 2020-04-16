@@ -24,6 +24,8 @@ var x = [
     5,
 ]
 
+var output = x[Math.floor(Math.random()*x.length)];
+
 
 client.on("ready", () => {
   console.log("You got bamboozled!");
@@ -66,6 +68,14 @@ client.on("message", (message) => {
 			} else
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
+				} else
+					if(message.content.startsWith(prefix + "roll")) {
+						message.channel.send({embed: {
+								     color: embedOrange,
+						   	             title: "Ah yes, you rolled a..",
+							             description: Math.floor(Math.random() * 6) + 1,
+							}});
+							
   }
 });
 client.on('message', message => {
@@ -83,7 +93,7 @@ client.on('message', message => {
 			    },
 			   {
 				     name: "**Cryptage/Interactions**",
-				     value: "!do you love me"
+				     value: "!do you love me, !can i hold your hand"
 			   },
 			    {
 				     name: "**Other**",
