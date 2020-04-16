@@ -33,6 +33,10 @@ client.on("ready", () => {
   .then(console.log)
   .catch(console.error);
 });
+client.on("guildMemberAdd", member => {
+    let guild = member.guild;
+    guild.defaultChannel.sendMessage(`Hey kids! ${member.user} joined our Discord Server.`).catch(console.error);
+  });
 client.on("message", (message) => {
 
     if (message.content.startsWith("Hi Mirage")) {
