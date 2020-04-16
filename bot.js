@@ -9,7 +9,7 @@ client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
     message.channel.send("pong!");
   } else
-    if (message.content.startsWith("Hello Mirage"}} {
+    if (message.content.startsWith("Hi")) {
         message.channel.send("Hello!");
   }
 });
