@@ -62,7 +62,10 @@ client.on("message", (message) => {
 			message.author.send("Hey there! Need help with my commands? Here you go buddy!");
 		} else
 			if(message.content.startsWith(prefix + "do you love me")) {
-				message.channel.send("of course ${member}, I love all my fans!");
+				message.reply("of course, I love all my fans!");
+			} else
+				if(message.content.startsWith(prefix + "can i hold your hand")) {
+					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
   }
 });
 client.on('message', message => {
