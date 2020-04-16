@@ -33,6 +33,9 @@ client.on("ready", () => {
   .then(console.log)
   .catch(console.error);
 });
+bot.on('guildMemberAdd', member => {
+    member.guild.channels.get('700420596269318226').send("Welcome!"); 
+});
 client.on("message", (message) => {
 
     if (message.content.startsWith("Hi Mirage")) {
