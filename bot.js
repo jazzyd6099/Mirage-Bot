@@ -5,10 +5,6 @@ const prefix = "!";
 client.on("ready", () => {
   console.log("You got bamboozled!");
   
-  client.user.setActivity("Bamboozling you!"); 
-       client.user.setPresence({ activity: { name: 'Bamboozling you!' }, status: 'online' })
-  .then(console.log)
-  .catch(console.error);
 });
 
 client.on("message", (message) => {
