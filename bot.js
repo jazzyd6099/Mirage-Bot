@@ -35,7 +35,7 @@ client.on("ready", () => {
 });
 client.on("guildMemberAdd", member => {
     let guild = member.guild;
-    guild.defaultChannel.sendMessage("Hey kids! ${member.user} joined our Discord Server.").catch(console.error);
+    member.guild.channels.get('700420596269318226').send("Hey kids! ${member.user} joined our Discord Server.").catch(console.error);
   });
 client.on("message", (message) => {
 
