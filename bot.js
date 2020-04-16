@@ -26,6 +26,29 @@ var x = [
 
 var output = x[Math.floor(Math.random()*x.length)];
 
+var fortunes = [
+    "Yes.",
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes definelty.",
+    "You may rely on it.",
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Signs point to yes.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now...",
+    "Cannot predict now.",
+    "Concentrate and ask again.",
+    "Don't count on it.",
+    "My reply is no.",
+    "My sources say no.",
+    "Outlook not so good...",
+    "Very doubtful.",
+];
+
 
 client.on("ready", () => {
   console.log("You got bamboozled!");
@@ -75,7 +98,14 @@ client.on("message", (message) => {
 						   	             title: "Ah yes, you rolled a..",
 							             description: Math.floor(Math.random() * 6) + 1,
 							}});
-							
+					}else
+						if(message.content.startsWith(prefix + "8ball")) {
+							message.channel.send({embed: {
+								color: embedPurple,
+								title: "Looking into the ball..".
+								description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
+								                   }});
+				 
   }
 });
 client.on('message', message => {
@@ -89,7 +119,7 @@ client.on('message', message => {
 			    },
 			    fields: [{
 				    name: "**Fun**",
-				    value: "WIP!"
+				    value: "!roll"
 			    },
 			   {
 				     name: "**Cryptage/Interactions**",
