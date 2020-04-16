@@ -44,6 +44,8 @@ client.on("message", (message) => {
 
     if (message.content.startsWith("Hi Mirage")) {
         message.channel.send("Hello!");
+		    
+	
    }
 });
 client.on("message", (message) => {
@@ -55,7 +57,20 @@ client.on("message", (message) => {
     } else
 	if (message.content.startsWith(prefix + "server")) {
 	message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
+	} else
+		if (message.content.startsWith(prefix + "help")) {
+			message.author.send("Hey there! Need help with my commands? Here you go buddy!");
   }
+});
+client.on('message', message => {
+	    if(message.content.includes("Need help with my commands? Here you go buddy!")) {
+		    message.channel.send({embed: {
+			    color: embedOrange,
+			    title: "My Commands",
+			    description: "!ping, !server",
+			    thumbnail: "https://imgur.com/7ZKmEtC",
+			    	 }});
+       }
 });
 
  
