@@ -68,7 +68,7 @@ client.on('message', message => {
 			    color: embedOrange,
 			    title: "My Commands",
 			    description: "!ping, !server",
-			    thumbnail: "https://imgur.com/7ZKmEtC",
+			    image: "https://imgur.com/7ZKmEtC",
 			    	 }});
        }
 });
