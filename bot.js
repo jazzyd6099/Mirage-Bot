@@ -67,8 +67,22 @@ client.on('message', message => {
 		    message.channel.send({embed: {
 			    color: embedOrange,
 			    title: "My Commands",
-			    description: "!ping, !server",
-			    image: "https://imgur.com/7ZKmEtC",
+			    description: "There will be more to come! Just wait, i'm gonna be sooo cool!",
+			    fields: [{
+				    name: "Fun",
+				    value: "WIP!"
+			    },
+			   {
+				     name: "Cryptage/Interactions",
+				     value: "WIP!"
+			   },
+			    {
+				     name: "Other",
+				    value: "WIP!"
+			    }
+				  ],
+		    }
+				
 			    	 }});
        }
 });
