@@ -62,7 +62,7 @@ client.on("message", (message) => {
 			message.author.send("Hey there! Need help with my commands? Here you go buddy!");
 		} else
 			if(message.content.startsWith(prefix + "do you love me")) {
-				message.author.send("Yeah, I love all my fans!");
+				message.channel.send("Yeah, I love all my fans!");
   }
 });
 client.on('message', message => {
