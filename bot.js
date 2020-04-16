@@ -28,8 +28,8 @@ var x = [
 client.on("ready", () => {
   console.log("You got bamboozled!");
   
-	client.user.setActivity("Porkchops"); 
-       client.user.setPresence({ activity: { name: 'Porkchops' }, status: 'online' })
+	client.user.setActivity("Eating Porkchops"); 
+       client.user.setPresence({ activity: { name: 'Eating Porkchops' }, status: 'online' })
   .then(console.log)
   .catch(console.error);
 });
@@ -38,7 +38,7 @@ client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(channel => channel.name === "general");
 	if(!channel) return;
 	
-	channel.send(`Hey kids! ${member} just joined! Give them a warm welcome for me. Or not, it's cool. I can just give them a high five later or something,`)
+	channel.send(`Hey kids! ${member} just joined! Give them a warm welcome for me. Or not, it's cool. I can just give them a high five later or whatever,`)
   });
 client.on("message", (message) => {
 
