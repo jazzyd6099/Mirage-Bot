@@ -35,7 +35,7 @@ client.on("ready", () => {
 });
 client.on('guildMemberAdd', member => {
   
-	const channel = member.guild.channels.find(channel => channel.name === "general");
+	const channel = member.guild.channels.cache.find(channel => channel.name === "general");
 	if(!channel) return;
 	
 	channel.send(`Welcome to the server! ${member} You're cool!`)
