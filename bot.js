@@ -33,13 +33,6 @@ client.on("ready", () => {
   .then(console.log)
   .catch(console.error);
 });
-client.on('guildMemberAdd', member => {
-    member.guild.channels.get('700420596269318226').send({embed: {
-	    				color: embedWhite,
-	    				title: "Welcome",
-	    				description: "WIP WIp blah",
-    					}});
-
 client.on("message", (message) => {
 
     if (message.content.startsWith("Hi Mirage")) {
