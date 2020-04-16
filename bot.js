@@ -60,6 +60,9 @@ client.on("message", (message) => {
 	} else
 		if (message.content.startsWith(prefix + "help")) {
 			message.author.send("Hey there! Need help with my commands? Here you go buddy!");
+		} else
+			if(message.content.startsWith(prefix + "do you love me")) {
+				message.author.send("Yeah, I love all my fans!");
   }
 });
 client.on('message', message => {
@@ -68,16 +71,19 @@ client.on('message', message => {
 			    color: embedOrange,
 			    title: "My Commands",
 			    description: "There will be more to come! Just wait, i'm gonna be sooo cool!",
+			    thumbnail: {
+				    url: "https://i.postimg.cc/P53V3vPc/EMl-Hv-Qh-UUAAXJl-N.jpg"
+			    },
 			    fields: [{
-				    name: "Fun",
+				    name: "**Fun**",
 				    value: "WIP!"
 			    },
 			   {
-				     name: "Cryptage/Interactions",
-				     value: "WIP!"
+				     name: "**Cryptage/Interactions**",
+				     value: "!do you love me"
 			   },
 			    {
-				     name: "Other",
+				     name: "**Other**",
 				    value: "WIP!"
 			    }
 				  ],
