@@ -33,9 +33,12 @@ client.on("ready", () => {
   .then(console.log)
   .catch(console.error);
 });
-client.on("guildMemberAdd", member => {
-    let guild = member.guild;
-    member.guild.channels.get('700420596269318226').send("Hey kids! ${member.user} joined our Discord Server.").catch(console.error);
+client.on('guildMemberAdd', member => {
+  
+	const channel = member.guild.channels.find(channel => channel.name === "general");
+	if(!channel) return;
+	
+	channel.send(`Welcome to the server! ${member} You're cool!`)
   });
 client.on("message", (message) => {
 
