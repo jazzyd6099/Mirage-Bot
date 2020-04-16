@@ -38,7 +38,7 @@ client.on('guildMemberAdd', member => {
 	const channel = member.guild.channels.cache.find(channel => channel.name === "general");
 	if(!channel) return;
 	
-	channel.send(`Welcome to the server! ${member} You're cool!`)
+	channel.send(`Hey kids! ${member} just joined! Give them a warm welcome for me. Or not, it's cool. I can just give them a high five later or something,`)
   });
 client.on("message", (message) => {
 
