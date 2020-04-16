@@ -81,8 +81,6 @@ client.on('message', message => {
 				    value: "WIP!"
 			    }
 				  ],
-		    }
-				
 			    	 }});
        }
 });
