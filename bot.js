@@ -111,9 +111,7 @@ client.on("message", (message) => {
 							 title: "Coin going up! It falls! What side is it?",
 							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]),
 						 }});
-						
-
-	
+							});
 client.on('message', message => {
 	    if(message.content.includes("Need help with my commands? Here you go buddy!")) {
 		    message.channel.send({embed: {
