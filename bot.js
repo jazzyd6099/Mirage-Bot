@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
-exports.run = (client, message, args) => {
 
 //embedColors
 
@@ -72,18 +71,6 @@ client.on("message", (message) => {
         message.channel.send("Hello!");
 		    
    }
-});
-
-client.on("messageReactionAdd",(reaction,user)=>{
-  if(!user) return;
-  if(user.client)return;
-  if(!reaction.message.channel.guild) return;
-  for(let n in emojiname){
-  if(reaction.emoji.name == emojiname[n]){
-    let role = reaction.message.guild.roles.find(r => r.name == rolename[n]);          
-    reaction.message.guild.member(user).addRole(role).catch(console.error);
-	    }
-}
 });
 client.on("message", (message) => {
 
