@@ -79,9 +79,6 @@ client.on("message", (message) => {
 		if(!args[1]){
 			message.channel.send(Embed);
 		break; 
-		}
-		});
-client.on("message", (message) => {
 
     if (message.content.startsWith("Hi Mirage")) {
         message.channel.send("Hello!");
