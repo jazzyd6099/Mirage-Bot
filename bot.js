@@ -105,6 +105,10 @@ client.on("message", (message) => {
             		        title: "Looking into the ball...",
                   		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
 								                   }});
+						} else
+							if(message.content.startsWith(prefix + "coinflip")) {
+								      var coinflip = ['Heads!','Tails!'];
+     						 message.channel.send(coinflip[Math.floor(Math.random () * coinflip.length)]);
 				 
   }
 });
