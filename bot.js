@@ -108,7 +108,10 @@ client.on("message", (message) => {
 						} else
 							if(message.content.startsWith(prefix + "coinflip")) {
 								      var coinflip = ['Heads!','Tails!'];
-     						 message.channel.send(coinflip[Math.floor(Math.random () * coinflip.length)]);
+     						 message.channel.send({embed: {
+							 color: embedOrange,
+							 title: "Coin going up! It falls! What side is it?",
+							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]);
 				 
   }
 });
