@@ -142,6 +142,9 @@ client.on('message', message => {
 			    }
 				  ],
 			    	 }});
+	    } else
+		    if(message.content.includes("!can I hold your hand")) {
+			    message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
        }
 });
 
