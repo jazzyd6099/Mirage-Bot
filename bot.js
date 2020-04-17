@@ -66,20 +66,7 @@ client.on('guildMemberAdd', member => {
 	channel.send(`Hey kids! ${member} just joined! Give them a warm welcome for me. Or not, it's cool. I can just give them a high five later or whatever,`)
   });
 client.on("message", (message) => {
-	let args = message.content.substring(prefix.length).split(" ");
 	
-	switch(args[0]){
-			
-		case "poll":
-		const Embed = new RichEmbed()
-		.setColor(0xFFC300)
-		.setTitle("Initiate Poll")
-		.setDescription("!poll to initiate a simple yes or no poll");
-			
-		if(!args[1]){
-			message.channel.send(Embed);
-		break; 
-
     if (message.content.startsWith("Hi Mirage")) {
         message.channel.send("Hello!");
 		    
