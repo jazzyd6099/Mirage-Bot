@@ -83,6 +83,7 @@ client.on("message", (message) => {
 		          const saywhat = args.join(" ")
         if (saywhat < 1) return message.channel.send("Didn't provide any text to say")
         message.channel.send(`**${message.author.username}** says ` + saywhat)
+	    } else
 	    
 	if (message.content.startsWith(prefix + "server")) {
 	message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
