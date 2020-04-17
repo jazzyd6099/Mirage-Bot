@@ -73,7 +73,6 @@ client.on("message", (message) => {
    }
 });
 client.on("message", (message) => {
-
   if (!message.content.startsWith(prefix)) return;
   
     if (message.content.startsWith(prefix + "ping")) {
@@ -113,7 +112,8 @@ client.on("message", (message) => {
 							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]),
 						 }});
 						
-});
+
+	
 client.on('message', message => {
 	    if(message.content.includes("Need help with my commands? Here you go buddy!")) {
 		    message.channel.send({embed: {
