@@ -112,6 +112,7 @@ client.on("message", (message) => {
 							 color: embedOrange,
 							 title: "Coin going up! It falls! What side is it?",
 							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]);
+						 }});
 				 
   }
 });
