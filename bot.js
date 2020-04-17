@@ -69,7 +69,15 @@ client.on("message", (message) => {
 	
     if (message.content.startsWith("Hi Mirage")) {
         message.channel.send("Hello!");
-		    
+    } else
+	    if (message.content.startsWith("Hello Mirage")) {
+		    message.channel.send("Hey there kid!");
+	    } else
+		    if (message.content.startsWith("Hello Mirage!")) {
+			    message.channel.send("Hey kid!");
+		    } else
+			    if (message.content.startsWith("hello mirage")) {
+				    message.channel.send("Hey! Wassup?");
    }
 });
 client.on("message", (message) => {
