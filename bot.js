@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
+exports.run = (client, message, args) => {
 
 //embedColors
 
@@ -78,6 +79,10 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
     } else
+	    if (message.content.startsWith(prefix+"say")) {
+		          const saywhat = args.join(" ")
+        if (saywhat < 1) return message.channel.send("Didn't provide any text to say")
+        message.channel.send(`**${message.author.username}** says ` + saywhat)
 	    
 	if (message.content.startsWith(prefix + "server")) {
 	message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
