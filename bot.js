@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
 exports.run = (client, message, args) => {
+
 //embedColors
 
 const embedRed = 0xff0000
@@ -124,21 +125,7 @@ client.on("message", (message) => {
 							 title: "Coin going up! It falls! What side is it?",
 							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]),
 						 }});
-							} else
-								if(message.content.startsWith(prefix+"poll")) {
-									      const sayMessage = args.join(" ");
-   				  if (sayMessage.length < 1) return message.channel.send("Didnt provide anything for the poll.")
-  					   if (message.member.hasPermission("KICK_MEMBERS")) {
-   					    const embed = new Discord.RichEmbed()
-    					   .setColor(0x00A2E8)
-    					   .setTitle(" Poll ")
-     					  .setDescription(`A poll has begun! The poll is: "**${sayMessage}**"!, vote now!`)
-     					   message.channel.send(embed).then(m => {
-   					         m.react('✅');
-     					         m.react('❌');
-           })
-      }
-}
+						
 });
 client.on('message', message => {
 	    if(message.content.includes("Need help with my commands? Here you go buddy!")) {
