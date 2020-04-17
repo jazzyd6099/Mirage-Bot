@@ -100,9 +100,6 @@ client.on("message", (message) => {
 							}});
 					}else
 						if(message.content.startsWith(prefix + "8ball")) {
-							     let reason = args.join(' ');
-    							if (reason.length < 1) 
-	  				  return message.channel.send('You did not give the bot a question');
 							  message.channel.send({embed: {
             		        color: embedPurple,
             		        title: "Looking into the ball...",
