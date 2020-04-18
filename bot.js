@@ -134,9 +134,6 @@ client.on("message", (message) => {
 			} else
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
-				} else
-					if (message.content.startsWith(prefix+"whatami")) {
-						message.reply("You are gay");
 					} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
