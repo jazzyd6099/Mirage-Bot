@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
+const permissionNeeded = "CHANGE_NICKNAME";
 
 //embedColors
 
@@ -112,6 +113,14 @@ client.on("message", (message) => {
 				    message.channel.send("Hey! Wassup?");
    }
 });
+client.on("message", (message) => {
+
+	if (!message.content.startsWith(prefix)) return;
+			if (message.content.startsWith(prefix+"can i have a drink")) {
+				member.roles.cache.some(role => role.name === '18+');
+				message.reply("Sure! What would you like?");
+			}
+			});
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
   
