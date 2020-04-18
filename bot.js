@@ -206,6 +206,12 @@ client.on('message', message => {
 					} else
 						if (message.content.includes("love mirage")) {
 							message.react('🧡');
+						} else
+							if (message.content.includes("love you mirage")) {
+								message.react('🧡');
+							} else
+								if (message.content.includes("love you Mirage")) {
+									message.react('🧡');
        }
 });
 
