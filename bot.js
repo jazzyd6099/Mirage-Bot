@@ -48,12 +48,11 @@ var fortunes = [
     "Outlook not so good...",
     "Very doubtful.",
 ];
-const loots = [ 'Med Kit!',
+var loots = [ 'Med Kit!',
 	       'Mozambique!', 
-	       'Syringe', 
-	       'Shield Cell',
-	       'Shield Battery'];
-  const loot = loots[Math.floor(Math.random() * loots.length)];
+	       'Syringe!', 
+	       'Shield Cell!',
+	       'Shield Battery!'];
 
 client.on("ready", () => {
   console.log("You got bamboozled!");
@@ -101,7 +100,11 @@ client.on("message", (message) => {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
 				} else
 					if (message.content.startsWith(prefix+"loot")) {
-						message.channel.send("You went looting and found ${loot}!");
+						message.channel.send({embed: {
+							color: embedOrange,
+							title: "You went looting and found..",
+							description: (loots[Math.floor(Math.random() * loots.length)]),
+						}});
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
 						message.channel.send({embed: {
