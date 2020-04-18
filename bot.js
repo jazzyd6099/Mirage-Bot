@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
-const permissionNeeded = `MANAGE_NICKNAMES`;
+
 //embedColors
 
 
@@ -124,7 +124,7 @@ client.on("message", (message) => {
 		} else
 			if (message.content.startsWith(prefix+"nessie")) {
 				var embed = new Discord.MessageEmbed()
-				.setcolor(0x00ff00)
+				.setColor(0x00ff00)
 				.setTitle("Look! A nessie appeared!")
 				.setImage("https://i.postimg.cc/0QQTfHYf/NESSIE.png")
 					message.channel.send({embed})
