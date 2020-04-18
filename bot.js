@@ -115,11 +115,11 @@ client.on("message", (message) => {
 client.on("message", (message) => {
 	
 			if (message.content.startsWith("can i have a drink")) {
-				if(message.member.roles.has(700964118898933831)) {
+				(message.member.roles.has(700964118898933831);
   				message.reply("Sure! What would you like?");
 				}
 			} else {
-  			message.reply("Sorry kid, you aren't old enough. Here, have some milk.");
+  				message.reply("Sorry kid, you aren't old enough. Here, have some milk.");
 			}
 			});
 client.on("message", (message) => {
