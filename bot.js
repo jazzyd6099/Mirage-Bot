@@ -27,6 +27,14 @@ var x = [
 
 var output = x[Math.floor(Math.random()*x.length)];
 
+var names = [
+	"Gay",
+	"Succ",
+	"Bi",
+	"A person who gives off big dick energy.",
+	"Straight as a stick.",
+	];
+
 var fortunes = [
     "Yes.",
     "It is certain.",
@@ -150,6 +158,12 @@ client.on("message", (message) => {
 							             description: Math.floor(Math.random() * 6) + 1,
 							}});
 					}else
+						if (message.content.startsWith(prefix+"whatami")) {
+							message.channel.send({embed: {
+								color: embedOrange,
+								tile: "You are..",
+								description: (names[Math.floor(Math.random() * names.length)]),
+							}});
 						if(message.content.startsWith(prefix + "8ball")) {
 							  message.channel.send({embed: {
             		        color: embedPurple,
