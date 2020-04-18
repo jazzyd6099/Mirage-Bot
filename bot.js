@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
-const talkedRecently = new Set();
 
 //embedColors
 
@@ -95,15 +94,6 @@ client.on('guildMemberAdd', member => {
 	channel.send(`Hey kids! ${member} just joined! Give them a warm welcome for me. Or not, it's cool. I can just give them a high five later or whatever,`)
   });
 client.on("message", (message) => {
-	
-	  if (talkedRecently.has(message.author.id)) {
-    message.channel.send("Calm down! You're spamming me. 20 seconds." + message.author);
-	  } else {
-		  talkedRecently.add(message.author.id);
-     		   setTimeout(() => {
-         	 talkedRecently.delete(message.author.id);
-        }, 2000);
-  
     if (message.content.startsWith("Hi Mirage")) {
         message.channel.send("Hello!");
     } else
