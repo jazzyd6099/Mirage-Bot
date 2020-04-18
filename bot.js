@@ -122,6 +122,13 @@ client.on("message", (message) => {
 		if (message.content.startsWith(prefix + "help")) {
 			message.author.send("Hey there! Need help with my commands? Here you go buddy!");
 		} else
+			if (message.content.startsWith(prefix"nessie")) {
+				var embed = new Discord.MessageEmbed()
+				.setcolor(0x00ff00)
+				.setTitle("Look! A nessie appeared!")
+				.setImage("https://i.postimg.cc/0QQTfHYf/NESSIE.png")
+					message.channel.send({embed})
+			} else
 			if(message.content.startsWith(prefix + "do you love me")) {
 				message.reply("of course, I love all my fans!");
 			} else
