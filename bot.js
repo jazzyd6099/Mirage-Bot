@@ -103,8 +103,7 @@ client.on("message", (message) => {
      		   setTimeout(() => {
          	 talkedRecently.delete(message.author.id);
         }, 2000);
-	  });
-client.on("message", (message) => {	  
+  
     if (message.content.startsWith("Hi Mirage")) {
         message.channel.send("Hello!");
     } else
