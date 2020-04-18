@@ -127,6 +127,12 @@ client.on("message", (message) => {
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
 				} else
+					if (message.content.startsWith(prefix+"sexyrate")) {
+						const sexyrate = Math.floor(Math.random() * 100)
+						var embed = new Discord.MessageEmbed()
+						.addField(" :fire: Sexy Rate :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale")
+            					.setThumbnail(message.author.displayAvatarURL)
+     							  message.channel.send({embed})
 					if (message.content.startsWith(prefix+"loot")) {
 						message.channel.send({embed: {
 							color: embedOrange,
