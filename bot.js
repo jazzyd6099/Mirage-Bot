@@ -202,10 +202,13 @@ client.on('message', message => {
 			    message.channel.send("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
 		    } else
 			    		if (message.content.includes("love Mirage")) {
-					    message.react('❤️');
+					    message.react('🧡');
 					} else
 						if (message.content.includes("love mirage")) {
-							message.react('❤️');
+							message.react('🧡');
+						} else
+							if (message.content.includes("love Mirage")) {
+								message.reply("Aww, love you too buddy!");
        }
 });
 
