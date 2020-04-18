@@ -130,8 +130,9 @@ client.on("message", (message) => {
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
 						var embed = new Discord.MessageEmbed()
-						.addField(" :fire: Sexy Rate :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale")
-            					.setThumbnail(message.author.displayAvatarURL)
+						.addColor(0xff790c)
+						.addField(" :fire: Sexy Rate :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale!")
+            					.setThumbnail(message.author.displayAvatarURL())
      							  message.channel.send({embed})
 					} else
 					if (message.content.startsWith(prefix+"loot")) {
