@@ -133,6 +133,7 @@ client.on("message", (message) => {
 						.addField(" :fire: Sexy Rate :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale")
             					.setThumbnail(message.author.displayAvatarURL)
      							  message.channel.send({embed})
+					} else
 					if (message.content.startsWith(prefix+"loot")) {
 						message.channel.send({embed: {
 							color: embedOrange,
