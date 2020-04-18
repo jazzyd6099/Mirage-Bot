@@ -83,7 +83,7 @@ var loots = [ 'A Med Kit!',
 	     'An Evo Shield!',
 	       'Nothing! :(',
 	    ];
-var name = [ "Gay",
+var names = [ "Gay",
 	     "Succ",
 	    "Straight as a stick",
 	    "Bi",
@@ -145,7 +145,7 @@ client.on("message", (message) => {
 					if (message.content.startsWith(prefix+"whatami")) {
 						message.channel.send({embed: {
 							color: embedOrange,
-							title: "You are..",
+							title: "**You are..**",
 							description: (names[Math.floor(Math.random() * names.length)]),
 						}});
 					if (message.content.startsWith(prefix+"sexyrate")) {
