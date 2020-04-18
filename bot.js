@@ -126,7 +126,7 @@ client.on("message", (message) => {
 					if (message.content.startsWith(prefix+"loot")) {
 						message.channel.send({embed: {
 							color: embedOrange,
-							title: "You went looting at a nearby supply bin and found..",
+							title: "**You went looting at a nearby supply bin and found..**",
 							description: (loots[Math.floor(Math.random() * loots.length)]),
 						}});
 					} else
