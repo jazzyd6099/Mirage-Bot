@@ -1,8 +1,9 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
-
+const permissionNeeded = `MANAGE_NICKNAMES`;
 //embedColors
+
 
 const embedRed = 0xff0000
 const embedOrange = 0xff790c
@@ -112,16 +113,6 @@ client.on("message", (message) => {
 				    message.channel.send("Hey! Wassup?");
    }
 });
-client.on("message", (message) => {
-	
-			if (message.content.startsWith("can i have a drink")) {
-				(message.member.roles.has(700964118898933831))
-  				message.reply("Sure! What would you like?");
-				}
-			} else {
-  				message.reply("Sorry kid, you aren't old enough. Here, have some milk.");
-			}
-			});
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
   
