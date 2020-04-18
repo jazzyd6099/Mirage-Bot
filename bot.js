@@ -27,14 +27,6 @@ var x = [
 
 var output = x[Math.floor(Math.random()*x.length)];
 
-var names = [
-	"Gay",
-	"Succ",
-	"Bi",
-	"A person who gives off big dick energy.",
-	"Straight as a stick.",
-	];
-
 var fortunes = [
     "Yes.",
     "It is certain.",
@@ -136,6 +128,9 @@ client.on("message", (message) => {
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
 				} else
+					if (message.content.startsWith(prefix+"whatami")) {
+						message.reply("You are gay");
+					} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
 						var embed = new Discord.MessageEmbed()
@@ -158,11 +153,6 @@ client.on("message", (message) => {
 							             description: Math.floor(Math.random() * 6) + 1,
 							}});
 					}else
-						if (message.content.startsWith(prefix+"whatami")) {
-							message.channel.send({embed: {
-								color: embedOrange,
-								tile: "You are..",
-								description: (names[Math.floor(Math.random() * names.length)]),
 							}});
 						if(message.content.startsWith(prefix + "8ball")) {
 							  message.channel.send({embed: {
