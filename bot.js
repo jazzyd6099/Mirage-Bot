@@ -131,7 +131,7 @@ client.on("message", (message) => {
 						const sexyrate = Math.floor(Math.random() * 100)
 						var embed = new Discord.MessageEmbed()
 						.setColor(0xff790c)
-						.addField(" :fire: Sexy Rate :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale!")
+						.addField(" :fire: *Sexy Rate* :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale!")
             					.setThumbnail(message.author.displayAvatarURL())
      							  message.channel.send({embed})
 					} else
@@ -177,7 +177,7 @@ client.on('message', message => {
 			    },
 			    fields: [{
 				    name: "**Fun**",
-				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot"
+				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot, !sexyrate"
 			    },
 			   {
 				     name: "**Cryptage/Interactions**",
