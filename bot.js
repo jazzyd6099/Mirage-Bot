@@ -83,20 +83,13 @@ var loots = [ 'A Med Kit!',
 	     'An Evo Shield!',
 	       'Nothing! :(',
 	    ];
-var names = [ "Gay",
-	     "Succ",
-	    "Straight as a stick",
-	    "Bi",
-	    "Me!",
-	    "A Mozambique",
-	    "An interesting person.",
-	    "Someone that'll probably backstab me. I hate when that happens.",
-	    "A cool person!",
-	    "A chill person!",
-	    "Vibe, just vibe.",
-	    "My decoy!",
-	    "My Wingman",  
-	    ];
+var names = [
+    "Gay",
+    "Succ",
+    "Bi",
+    "Straight as a stick!",
+    "My decoy!",
+];
 
 client.on("ready", () => {
   console.log("You got bamboozled!");
