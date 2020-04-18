@@ -200,6 +200,12 @@ client.on('message', message => {
 	    } else
 		    if(message.content.includes("That's what Elliott is here for.")) {
 			    message.channel.send("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
+		    } else
+			    		if (message.content.includes("love Mirage")) {
+					    message.react('❤️');
+					} else
+						if (message.content.includes("love mirage")) {
+							message.react('❤️');
        }
 });
 
