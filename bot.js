@@ -124,7 +124,7 @@ client.on("message", (message) => {
 		} else
 			if (message.content.startsWith(prefix+"nessie")) {
 				var embed = new Discord.MessageEmbed()
-				.setColor(0x00ff00)
+				.setColor(4484374)
 				.setTitle("Look! A nessie appeared!")
 				.setImage("https://i.postimg.cc/0QQTfHYf/NESSIE.png")
 					message.channel.send({embed})
