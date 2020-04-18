@@ -75,6 +75,11 @@ var loots = [ 'A Med Kit!',
 	       'A Triple Take!',
 	        'A RE-45!',
 	        'A P2020!',
+	     'A Level 1 Body Shield!',
+	     'A Level 2 Body Shield!',
+	     'A Level 3 Body Shield!',
+	     'A Level 4 Body Shield!',
+	     'An Evo Shield!',
 	       'Nothing! :(',
 	    ];
 
@@ -164,7 +169,7 @@ client.on('message', message => {
 			    },
 			    fields: [{
 				    name: "**Fun**",
-				    value: "!roll, !8ball(make sure to ask a question!), !coinflip"
+				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot"
 			    },
 			   {
 				     name: "**Cryptage/Interactions**",
