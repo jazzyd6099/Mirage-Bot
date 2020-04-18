@@ -206,9 +206,6 @@ client.on('message', message => {
 					} else
 						if (message.content.includes("love mirage")) {
 							message.react('🧡');
-						} else
-							if (message.content.includes("love Mirage")) {
-								message.reply("Aww, love you too buddy!");
        }
 });
 
