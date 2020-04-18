@@ -120,6 +120,7 @@ client.on("message", (message) => {
 				}
 			} else {
   			message.reply("Sorry kid, you aren't old enough. Here, have some milk.");
+			}
 			});
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
