@@ -182,8 +182,8 @@ client.on('message', message => {
 				  ],
 			    	 }});
 	    } else
-		    if(message.content.includes("!can I hold your hand")) {
-			    message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
+		    if(message.content.includes("That's what Elliott is here for.")) {
+			    message.reply("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
        }
 });
 
