@@ -183,7 +183,7 @@ client.on('message', message => {
 			    	 }});
 	    } else
 		    if(message.content.includes("That's what Elliott is here for.")) {
-			    message.reply("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
+			    message.channel.send("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
        }
 });
 
