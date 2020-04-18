@@ -153,7 +153,6 @@ client.on("message", (message) => {
 							             description: Math.floor(Math.random() * 6) + 1,
 							}});
 					}else
-							}});
 						if(message.content.startsWith(prefix + "8ball")) {
 							  message.channel.send({embed: {
             		        color: embedPurple,
