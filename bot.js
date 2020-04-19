@@ -52,7 +52,7 @@ var fortunes = [
 ];
 var loots = [ 'A Med Kit!',
 	       'A Mozambique!', 
-	       'Syringe!', 
+	       'A Syringe!', 
 	       'A Shield Cell!',
 	       'A Shield Battery!',
 	       'Light Ammo!',
