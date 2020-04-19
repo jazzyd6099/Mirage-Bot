@@ -136,6 +136,9 @@ client.on("message", (message) => {
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
 					} else
+						if (message.content.startsWith(prefix+"bullylen")) {
+							message.channel.send("succ");
+						} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
 						var embed = new Discord.MessageEmbed()
