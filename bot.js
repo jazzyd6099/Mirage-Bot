@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
 const activities = require('./jsons/activity');
-
+const permissionNeeded = "MANAGE_NICKNAMES";
 //embedColors
 
 
@@ -121,7 +121,7 @@ client.on("message", (message) => {
     message.channel.send("pong!");
     } else
 	    if (message.content.startsWith(prefix+"can i have a drink")) {
-		if(message.member.roles.has(700964118898933831))
+		    if(message.member.roles.has(role.id))
 		message.reply("Sure!");
 	    } else
 		if (message.content.startsWith(prefix + "help")) {
