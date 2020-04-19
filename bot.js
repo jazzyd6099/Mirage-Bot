@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
+const activities = require('./jsons/activity');
 
 //embedColors
 
@@ -87,9 +88,9 @@ var loots = [ 'A Med Kit!',
 client.on("ready", () => {
   console.log("You got bamboozled!");
   
-	client.user.setActivity("Eating Porkchops"); 
-       client.user.setPresence({ activity: { name: 'Eating Porkchops' }, status: 'online' })
-  .then(console.log)
+const activity = activities[Math.floor(Math.random() * activities.length)];
+client.user.setPresence({ activity: { name: activity.text, type: activity.type }, status: 'online' })
+	   .then(console.log)
   .catch(console.error);
 });
 client.on('guildMemberAdd', member => {
