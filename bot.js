@@ -150,7 +150,7 @@ client.on("message", (message) => {
 							title: "**You went looting at a nearby supply bin and found..**",
 							description: (loots[Math.floor(Math.random() * loots.length)]),
 							thumbnail: {
-								url: "https://i.postimg.cc/TwWxPzyS/maxresdefault-1.jpg"
+								url: "https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg"
 							},
 						}});
 					} else
