@@ -120,10 +120,6 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
     } else
-	    if (message.content.startsWith(prefix+"can i have a drink")) {
-		    if(message.member.roles.has(700964118898933831))
-		message.reply("Sure!");
-	    } else
 		if (message.content.startsWith(prefix + "help")) {
 			message.author.send("Hey there! Need help with my commands? Here you go buddy!");
 		} else
