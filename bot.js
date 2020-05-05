@@ -143,7 +143,7 @@ client.on("message", (message) => {
 								let lovedUser = message.mentions.users.first();
 								
 					 if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
-								var embed = new Discord.messageEmbed()
+								var embed = new Discord.MessageEmbed()
 								.setColor(0xff790c)
 								.setDescription("I love you ", + `${lovedUser.user.username}`)
 								message.channel.send({embed})
