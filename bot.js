@@ -238,9 +238,6 @@ client.on('message', message => {
 								} else
 									if (message.content.includes("mirage i love you")) {
 										message.react('🧡');
-									} else
-										if (message.content.includes("and capitalism for the poor")) {
-											message.channel.send("lentils");
        }
 });
 
