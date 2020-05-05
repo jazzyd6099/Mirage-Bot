@@ -143,7 +143,10 @@ client.on("message", (message) => {
 								let lovedUser = message.mentions.users.first();
 								
 					 if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
-								message.channel.send("I love you! 💕 " + lovedUser);
+								var embed = new Discord.messageEmbed()
+								.setColor(0xff790c)
+								.setDescription("I love you ", + `${lovedUser.user.username}`)
+								message.channel.send({embed})
 						} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
