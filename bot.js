@@ -144,7 +144,6 @@ client.on("message", (message) => {
 							var embed = new Discord.MessageEmbed()
 								.setTitle("Russian Roulette")
 								.setColor(0x000000)
-								.setTimestamp()
 								.setDescription(rr[Math.floor(Math.random() * rr.length)])
 								message.channel.send({embed})
 							} else
