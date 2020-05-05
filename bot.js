@@ -139,6 +139,12 @@ client.on("message", (message) => {
 						if (message.content.startsWith(prefix+"bullylen")) {
 							message.channel.send("succ");
 						} else
+							if (message.content.startsWith(prefix+"love")) {
+								let lovedUser = message.mentions.users.first();
+								
+					 if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
+								message.channel.send("I love you! 💕" + lovedUser);
+						} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
 						var embed = new Discord.MessageEmbed()
