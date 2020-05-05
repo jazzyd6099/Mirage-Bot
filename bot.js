@@ -133,6 +133,9 @@ client.on("message", (message) => {
 			if(message.content.startsWith(prefix + "do you love me")) {
 				message.reply("of course, I love all my fans!");
 			} else
+				if (message.content.startsWith(prefix+"mydicksize")) {
+					message.reply("damn, you got a big dick!");
+				} else
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
 					} else
@@ -147,9 +150,6 @@ client.on("message", (message) => {
 								.setDescription(rr[Math.floor(Math.random() * rr.length)])
 								message.channel.send({embed})
 							} else
-						if (message.content.startsWith(prefix+"bullylen")) {
-							message.channel.send("succ");
-						} else
 							if (message.content.startsWith(prefix+"love")) {
 								let lovedUser = message.mentions.users.first();
 					 if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
