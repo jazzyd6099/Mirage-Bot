@@ -139,7 +139,7 @@ client.on("message", (message) => {
 						if(message.content.startsWith(prefix+"rr")) {
 							 let rr = [
     							  "Boom! 💥 You're dead! Better luck next time buddy.",
-   							   "Wow you made it alive.. 😮👏"
+   							   "Wow you made it out alive.. 😮"
 								    ];
 							var embed = new Discord.MessageEmbed()
 								.setTitle("Russian Roulette")
