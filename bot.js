@@ -151,9 +151,9 @@ client.on("message", (message) => {
 								message.channel.send({embed})
 							} else
 							if (message.content.startsWith(prefix+"love")) {
-								let lovedUser = message.mentions.members.first();
-					 if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
-								message.reply("test " + lovedUser);
+								let lovedMember = message.mentions.members.first();
+					 if(message.mentions.members.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
+								message.reply("test " + lovedMember);
 						} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
 						const sexyrate = Math.floor(Math.random() * 100)
