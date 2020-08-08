@@ -164,6 +164,18 @@ client.on("message", (message) => {
             					.setThumbnail(message.author.displayAvatarURL())
      							  message.channel.send({embed})
 					} else
+						if (message.content.startsWith(prefix+"poll")) {
+						let question = message.content.slice(client.prefix.length+5)
+						if(!question){
+							return message.channel.send("You did not specify a question for your poll!");
+						var embed = new Discord.MessageEmbed()
+						.setTitle("New Poll")
+						.setDescription(question)
+						.setFooter("${message.author.username} created this poll.")
+						let message = await message.channel.send({embed})
+						await message.react('✅')
+							await.message.react('❌')
+						} else
 					if (message.content.startsWith(prefix+"loot")) {
 						message.channel.send({embed: {
 							color: embedOrange,
