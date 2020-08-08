@@ -209,7 +209,7 @@ client.on('message', message => {
 			    },
 			    fields: [{
 				    name: "**Fun**",
-				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot, !sexyrate, !nessie, !rr"
+				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot, !sexyrate, !nessie, !love, !rr"
 			    },
 			   {
 				     name: "**Cryptage/Interactions**",
