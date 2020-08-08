@@ -153,7 +153,7 @@ client.on("message", (message) => {
 							if (message.content.startsWith(prefix+"love")) {
 								let member = message.mentions.users.first();
 					 if(message.mentions.users.size < 1) return message.reply("You forgot to mention someone for me to love! 🙁");
-								message.channel.send(`${message.author} loves ${member}!`, {
+								message.channel.send(`I love you, ${member}!`, {
 								});
 						} else
 					if (message.content.startsWith(prefix+"sexyrate")) {
