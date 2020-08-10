@@ -92,6 +92,7 @@ const activity = activities[Math.floor(Math.random() * activities.length)];
 client.user.setPresence({ activity: { name: activity.text, type: activity.type }, status: 'online' })
 	   .then(console.log)
   .catch(console.error);
+	10000);
 });
 client.on('guildMemberAdd', member => {
   
