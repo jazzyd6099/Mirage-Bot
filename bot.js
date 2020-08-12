@@ -237,7 +237,6 @@ client.on("message", (message) => {
 							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]),
 						 }});
 							}
-       }
 });
 
  
