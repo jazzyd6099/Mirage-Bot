@@ -112,6 +112,47 @@ client.on("message", (message) => {
 		    } else
 			    if (message.content.startsWith("hello mirage")) {
 				    message.channel.send("Hey! Wassup?");
+				      if(message.content.includes("Need help with my commands? Here you go buddy!")) {
+				      } else
+		    message.channel.send({embed: {
+			    color: embedOrange,
+			    title: "My Commands",
+			    description: "There will be more to come! Just wait, i'm gonna be sooo cool!",
+			    thumbnail: {
+				    url: "https://i.postimg.cc/P53V3vPc/EMl-Hv-Qh-UUAAXJl-N.jpg"
+			    },
+			    fields: [{
+				    name: "**Fun**",
+				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot, !sexyrate, !nessie, !love, !rr"
+			    },
+			   {
+				     name: "**Cryptage/Interactions**",
+				     value: "!do you love me, !can i hold your hand"
+			   },
+			    {
+				     name: "**Other**",
+				    value: "WIP!"
+			    }
+				  ],
+			    	 }});
+	    } else
+		    if(message.content.includes("That's what Elliott is here for.")) {
+			    message.channel.send("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
+		    } else
+			    		if (message.content.includes("love Mirage")) {
+					    message.react('🧡');
+					} else
+						if (message.content.includes("love mirage")) {
+							message.react('🧡');
+						} else
+							if (message.content.includes("love you mirage")) {
+								message.react('🧡');
+							} else
+								if (message.content.includes("love you Mirage")) {
+									message.react('🧡');
+								} else
+									if (message.content.includes("mirage i love you")) {
+										message.react('🧡');
    }
 });
 client.on("message", (message) => {
@@ -196,49 +237,6 @@ client.on("message", (message) => {
 							 description: (coinflip[Math.floor(Math.random () * coinflip.length)]),
 						 }});
 							}
-								
-	});
-client.on('message', message => {
-	    if(message.content.includes("Need help with my commands? Here you go buddy!")) {
-		    message.channel.send({embed: {
-			    color: embedOrange,
-			    title: "My Commands",
-			    description: "There will be more to come! Just wait, i'm gonna be sooo cool!",
-			    thumbnail: {
-				    url: "https://i.postimg.cc/P53V3vPc/EMl-Hv-Qh-UUAAXJl-N.jpg"
-			    },
-			    fields: [{
-				    name: "**Fun**",
-				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot, !sexyrate, !nessie, !love, !rr"
-			    },
-			   {
-				     name: "**Cryptage/Interactions**",
-				     value: "!do you love me, !can i hold your hand"
-			   },
-			    {
-				     name: "**Other**",
-				    value: "WIP!"
-			    }
-				  ],
-			    	 }});
-	    } else
-		    if(message.content.includes("That's what Elliott is here for.")) {
-			    message.channel.send("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
-		    } else
-			    		if (message.content.includes("love Mirage")) {
-					    message.react('🧡');
-					} else
-						if (message.content.includes("love mirage")) {
-							message.react('🧡');
-						} else
-							if (message.content.includes("love you mirage")) {
-								message.react('🧡');
-							} else
-								if (message.content.includes("love you Mirage")) {
-									message.react('🧡');
-								} else
-									if (message.content.includes("mirage i love you")) {
-										message.react('🧡');
        }
 });
 
