@@ -122,7 +122,7 @@ client.on("message", (message) => {
 					.addField('__Fun__', '!roll, !8ball, !coinflip, !loot, !sexyrate, !nessie, !love, !rr')
 					.addField('__Cryptage/Interactions__', '!do you love me, !can i hold your hand')
 					.addField('__Other__', 'WIP!')
-					.setFooter('*Bot coded and created by SpaceCarame#6433!*')
+					.setFooter('Bot coded and created by SpaceCarame#6433!')
 					message.channel.send({embed})
 	    } else
 		    if(message.content.includes("That's what Elliott is here for.")) {
