@@ -114,28 +114,16 @@ client.on("message", (message) => {
 				    message.channel.send("Hey! Wassup?");
 			    } else
 				      if(message.content.includes("Need help with my commands? Here you go buddy!")) {
-				      } else
-		    message.channel.send({embed: {
-			    color: embedOrange,
-			    title: "My Commands",
-			    description: "There will be more to come! Just wait, i'm gonna be sooo cool!",
-			    thumbnail: {
-				    url: "https://i.postimg.cc/P53V3vPc/EMl-Hv-Qh-UUAAXJl-N.jpg"
-			    },
-			    fields: [{
-				    name: "**Fun**",
-				    value: "!roll, !8ball(make sure to ask a question!), !coinflip, !loot, !sexyrate, !nessie, !love, !rr"
-			    },
-			   {
-				     name: "**Cryptage/Interactions**",
-				     value: "!do you love me, !can i hold your hand"
-			   },
-			    {
-				     name: "**Other**",
-				    value: "WIP!"
-			    }
-				  ],
-			    	 }});
+		    			var embed = new Discord.MessageEmbed()
+					.setTitle("My Commands")
+					.setColor(0xff790c)
+					.setDescription("There will be more to come! Just wait, i'm going to be sooo cool!")
+					.setThumbnail('https://i.postimg.cc/P53V3vPc/EMl-Hv-Qh-UUAAXJl-N.jpg')
+					.addField('__Fun__', '!roll, !8ball, !coinflip, !loot, !sexyrate, !nessie, !love, !rr')
+					.addField('__Cryptage/Interactions__', '!do you love me, !can i hold your hand')
+					.addField('__Other__', 'WIP!')
+					.setFooter('*Bot coded and created by SpaceCarame#6433!*')
+					message.channel.send({embed})
 	    } else
 		    if(message.content.includes("That's what Elliott is here for.")) {
 			    message.channel.send("Yeah, sorry about Tae! I'm the entertainer if you wish to call me that! I bring the life to the party.");
