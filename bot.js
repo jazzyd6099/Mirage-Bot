@@ -112,6 +112,7 @@ client.on("message", (message) => {
 		    } else
 			    if (message.content.startsWith("hello mirage")) {
 				    message.channel.send("Hey! Wassup?");
+			    } else
 				      if(message.content.includes("Need help with my commands? Here you go buddy!")) {
 				      } else
 		    message.channel.send({embed: {
