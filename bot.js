@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
 const activities = require('./jsons/activity');
-const loot = require('./jsons/loot');
+const loots = require('./jsons/loot');
 
 //embedColors
 
@@ -51,7 +51,7 @@ var fortunes = [
     "Outlook not so good...",
     "Very doubtful.",
 ];
-var loots = [ 'A Med Kit!',
+var looties = [ 'A Med Kit!',
 	       'A Mozambique!', 
 	       'A Syringe!', 
 	       'A Shield Cell!',
@@ -201,12 +201,12 @@ client.on('message', async(message) => {
 						else if (loot < 8) rarity = "rare";
 						else if (loot < 10) rarity = 'epic';
 						else rarity = 'legendary';
-						const looty = loot[rarity];
+						const loot = loots[rarity];
 						var embed = new Discord.MessageEmbed()
 						.setColor(0xff790c)
 						.setTitle("You went looting at a nearby supply bin and found..")
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
-						.setDescription(`${looty.name} do you want to loot again?`)
+						.setDescription(`${loot.name} do you want to loot again?`)
 						message.channel.send({embed})
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
