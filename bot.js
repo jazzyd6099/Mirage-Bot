@@ -222,7 +222,7 @@ client.on('message', async(message) => {
 							  var embed = new Discord.MessageEmbed()
 							  .setColor(0x6a00b0)
 							  .setTitle(`Looking into the ball... \n\n ${question}`)
-							  .setDescription(fortunes[Math.floor(Math.random() * fortunes.length)]))
+							  .setDescription(fortunes[Math.floor(Math.random() * fortunes.length)])
 						} else
 							if(message.content.startsWith(prefix + "coinflip")) {
 								      var coinflip = ['Heads!','Tails!'];
