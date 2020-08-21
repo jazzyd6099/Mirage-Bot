@@ -202,7 +202,7 @@ client.on('message', async(message) => {
 						else if (loot < 10) rarity = 'epic';
 						else rarity = 'legendary';
 						const looty = loot[rarity];
-						var embed = new Disocrd.MessageEmbed()
+						var embed = new Discord.MessageEmbed()
 						.setColor(0xff790c)
 						.setTitle("You went looting at a nearby supply bin and found..")
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
