@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const prefix = "!";
 const activities = require('./jsons/activity');
 const loots = require('./jsons/loot');
-const slots = ['🍇', '🍊', '🍐', '🍒', '🍋'];
 
 //embedColors
 
@@ -209,24 +208,6 @@ client.on('message', async(message) => {
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
 						.setDescription(`${looty.name}! \n\n **Do you want to loot again?**`)
 						message.channel.send({embed})
-					} else
-						if(message.content.startsWith(prefix+"slots")) {
-							const slotOne = slots[Math.floor(Math.random() * slots.length)];
-							const slotTwo = slots[Math.floor(Math.random() * slots.length)];
-							const slotThree = slots[Math.floor(Math.random() * slots.length)];
-							if (slotOne === slotTwo && slotOne === slotThree) {
-								var embed = new Discord.MessageEmbed()
-								.setColor(0xff790c)
-								.setTitle("Ding! You won!")
-								.setDescription(`${slotOne}|${slotTwo}|${slotThree} \nNice job kid!`)
-								message.channel.send({embed})
-							} 
-							return 
-							var embed = new Discord.MessageEmbed()
-							.setcolor(0xff790c)
-							.setTitle("Aww, you lost. Guess it's just bad luck?")
-							.setDescription(`${slotOne}|${slotTwo}|${slotThree}`)
-							message.channel.send({embed})
 						} else
 					if(message.content.startsWith(prefix + "roll")) {
 						message.channel.send({embed: {
