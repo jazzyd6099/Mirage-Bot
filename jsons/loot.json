@@ -1,0 +1,22 @@
+{
+    "common": {
+        "name": "Level 1 Body Shield",
+        "max": 5,
+        "min": 0
+    },
+    "rare": {
+        "name": "Level 2 Body Shield",
+        "max": 50,
+        "min": 10
+        },
+    "epic": {
+       "name": "Level 3 Body Shield",
+       "max": 200,
+       "min": 10
+       },
+       "legendary": {
+       "name": "Level 4 Body Shield",
+       "max": 500,
+       "min": 300
+       }
+ }
