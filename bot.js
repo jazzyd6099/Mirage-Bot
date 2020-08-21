@@ -223,8 +223,8 @@ client.on('message', async(message) => {
 							
 							var embed = new Discord.MessageEmbed()
 							.setColor(0x6a00b0)
-							.setTitle(`Looking into the ball... \nQuestion: __${question}__`)
-							.setDescription('Answer:' + fortune)
+							.setTitle(`Looking into the ball... \n__Question:__ ${question}`)
+							.setDescription('__Answer:__ ' + fortune)
 							message.channel.send({embed})
 						} else
 							if(message.content.startsWith(prefix + "coinflip")) {
