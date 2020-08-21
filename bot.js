@@ -207,9 +207,9 @@ client.on('message', async(message) => {
 						.setTitle("You went looting at a nearby supply bin and found..")
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
 						.setDescription(`${looty.name}! \n\n **Do you want to loot again?**`)
-						message.channel.send({embed})
-						message.react('✅')
-						message.react('❎')
+						let lootEmbed = await client.channels.cache.get(channel.id).send(embed)
+						lootEmbed.react('✅')
+						lootEmbed.react('❎')
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
 						message.channel.send({embed: {
