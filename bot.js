@@ -219,10 +219,11 @@ client.on('message', async(message) => {
 						if(message.content.startsWith(prefix + "8ball")) {
 							let question = args.slice(1).join(' ')
     							if (!question) return message.channel.send("You need to provide a question for the mighty 8ball!");
+							
 							  var embed = new Discord.MessageEmbed()
 							  .setColor(0x6a00b0)
 							  .setTitle("Looking into the ball...")
-							  .setDescription(`${question} \n\n`(fortunes[Math.floor(Math.random() * fortunes.length)]))
+							  .setDescription(`The question: ${question} \n\n ${fortunes[Math.floor(Math.random() * fortunes.length)]}`)
 						} else
 							if(message.content.startsWith(prefix + "coinflip")) {
 								      var coinflip = ['Heads!','Tails!'];
