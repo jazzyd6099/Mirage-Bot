@@ -208,8 +208,6 @@ client.on('message', async(message) => {
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
 						.setDescription(`${looty.name}! \n\n **Do you want to loot again?**`)
 						message.channel.send({embed})
-						embed.react('✅')
-						embed.react('❎')
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
 						message.channel.send({embed: {
