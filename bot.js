@@ -201,12 +201,12 @@ client.on('message', async(message) => {
 						else if (loot < 8) rarity = "rare";
 						else if (loot < 10) rarity = 'epic';
 						else rarity = 'legendary';
-						const loot = loots[rarity];
+						const looty = loots[rarity];
 						var embed = new Discord.MessageEmbed()
 						.setColor(0xff790c)
 						.setTitle("You went looting at a nearby supply bin and found..")
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
-						.setDescription(`${loot.name} do you want to loot again?`)
+						.setDescription(`${looty.name} do you want to loot again?`)
 						message.channel.send({embed})
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
