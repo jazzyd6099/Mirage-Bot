@@ -206,8 +206,10 @@ client.on('message', async(message) => {
 						.setColor(0xff790c)
 						.setTitle("You went looting at a nearby supply bin and found..")
 						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
-						.setDescription(`${looty.name}! \n\n do you want to loot again?`)
+						.setDescription(`${looty.name}! \n\n **Do you want to loot again?**`)
 						message.channel.send({embed})
+						message.react('✅')
+						message.react('❎')
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
 						message.channel.send({embed: {
