@@ -223,7 +223,7 @@ client.on('message', async(message) => {
 							
 							var embed = new Discord.MessageEmbed()
 							.setColor(0x6a00b0)
-							.setTitle(`Looking into the ball... ${question}`)
+							.setTitle(`Looking into the ball... \n\n ${question}`)
 							.setDescription(fortunes[Math.floor(Math.random() * fortunes.length)])
 							message.channel.send({embed})
 						} else
