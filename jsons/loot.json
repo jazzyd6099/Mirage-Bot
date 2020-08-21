@@ -1,21 +1,37 @@
 {
-    "common": {
-        "name": "A Level 1 Body Shield",
-        "max": 5,
-        "min": 0
+    "common": [
+        "A Level 1 Body Shield",
+        "A Level 1 Helmet",
+        "A Level 1 Knockdown Shield",
+        "A Level 1 Backpack"
+        ],
+    "max": 5,
+    "min": 0 
     },
-    "rare": {
-        "name": "A Level 2 Body Shield",
+    "rare": [
+        "A Level 2 Body Shield",
+        "A Level 2 Helmet",
+        "A Level 2 Knockdown Shield",
+        "A Level 2 Backpack"
+        ],
         "max": 50,
         "min": 10
         },
-    "epic": {
-       "name": "A Level 3 Body Shield",
+    "epic": [
+       "A Level 3 Body Shield",
+       "A Level 3 Helmet",
+       "A Level 3 Knockdown Shield",
+       "A Level 3 Backpack"
+        ],
        "max": 200,
        "min": 10
        },
-       "legendary": {
-       "name": "A Level 4 Body Shield",
+     "legendary": [
+       "A Level 4 Body Shield",
+       "A Level 4 Helmet",
+       "A Level 4 Knockdown Shield",
+       "A Level 4 Backpakc"
+         ]
        "max": 500,
        "min": 300
        }
