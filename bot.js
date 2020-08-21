@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const prefix = "!";
 const activities = require('./jsons/activity');
+const loot = require('./jsons/loot');
 
 //embedColors
 
@@ -144,7 +145,7 @@ client.on("message", (message) => {
 										message.react('🧡');
    }
 });
-client.on("message", (message) => {
+client.on('message', async(message) => {
   if (!message.content.startsWith(prefix)) return;
 	const messageArray = message.content.split(' ');
 	const args = messageArray.slice(1);
@@ -191,17 +192,22 @@ client.on("message", (message) => {
 						.setColor(0xff790c)
 						.addField(" :fire: *Sexy Rate* :fire:  ", "I rate you a " + sexyrate + " out of 100 on the sexy scale!")
             					.setThumbnail(message.author.displayAvatarURL())
-     							  message.channel.send({embed})
+     						message.channel.send({embed})
 					} else
 					if (message.content.startsWith(prefix+"loot")) {
-						message.channel.send({embed: {
-							color: embedOrange,
-							title: "**You went looting at a nearby supply bin and found..**",
-							description: (loots[Math.floor(Math.random() * loots.length)]),
-							thumbnail: {
-								url: "https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg"
-							},
-						}});
+						const loot = Math.floor(Math.random() * 10) + 1;
+						let rarity
+						if (loot < 5) rarity = "common";
+						else if (loot < 8) rarity = "rare";
+						else if (loot < 10) rarity = 'epic';
+						else rarity = 'legendary';
+						const looty = loot[rarity];
+						var embed = new Disocrd.MessageEmbed()
+						.setColor(0xff790c)
+						.setTitle("You went looting at a nearby supply bin and found..")
+						.setThumbnail('https://i.postimg.cc/qMXTzfwh/maxresdefault-1.jpg')
+						.setDescription(`${loot.name} do you want to loot again?`)
+						message.channel.send({embed})
 					} else
 					if(message.content.startsWith(prefix + "roll")) {
 						message.channel.send({embed: {
