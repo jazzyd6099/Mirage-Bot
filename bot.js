@@ -146,6 +146,8 @@ client.on("message", (message) => {
 });
 client.on("message", (message) => {
   if (!message.content.startsWith(prefix)) return;
+	const messageArray = message.content.split(' ');
+	const args = messageArray.slice(1);
   
     if (message.content.startsWith(prefix + "ping")) {
     message.channel.send("pong!");
@@ -162,9 +164,6 @@ client.on("message", (message) => {
 			} else
 			if(message.content.startsWith(prefix + "do you love me")) {
 				message.reply("of course, I love all my fans!");
-			} else
-				if (message.content.startsWith(prefix+"mydicksize")) {
-					message.reply("damn, you got a big dick!");
 				} else
 				if(message.content.startsWith(prefix + "can i hold your hand")) {
 					message.reply("I don't know how Tae is gonna react to you asking that! :sweat_smile:");
@@ -212,6 +211,8 @@ client.on("message", (message) => {
 							}});
 					}else
 						if(message.content.startsWith(prefix + "8ball")) {
+							let question = args.slice(1).join(' ')
+    							if (!question) return message.channel.send("You need to provide a question for the mighty 8ball!");
 							  message.channel.send({embed: {
             		        color: embedPurple,
             		        title: "Looking into the ball...",
