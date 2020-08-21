@@ -221,11 +221,11 @@ client.on('message', async(message) => {
 						let question = args.slice(1).join(' ')
 					if (!question) return message.channel.send("You need to provide a question for the 8ball!");
 							
-							message.channel.send({embed: {
-            		        color: embedPurple,
-            		        title: "Looking into the ball...",
-                  		description: (fortunes[Math.floor(Math.random() * fortunes.length)]),
-								                   }});
+							var embed = new Discord.MessageEmbed()
+							.setColor(0x6a00b0)
+							.setTitle(`Looking into the ball... ${question}`)
+							.setDescription(fortunes[Math.floor(Math.random() * fortunes.length)])
+							message.channel.send({embed})
 						} else
 							if(message.content.startsWith(prefix + "coinflip")) {
 								      var coinflip = ['Heads!','Tails!'];
