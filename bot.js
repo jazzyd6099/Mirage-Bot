@@ -217,14 +217,14 @@ client.on('message', async(message) => {
 							}});
 					}else
 						if(message.content.startsWith(prefix + "8ball")) {
-							
+							const fortune = fortunes[Math.floor(Math.random() * fortunes.length)]
 						let question = args.slice(0).join(' ')
 					if (!question) return message.channel.send("You need to provide a question for the 8ball!");
 							
 							var embed = new Discord.MessageEmbed()
 							.setColor(0x6a00b0)
 							.setTitle(`Looking into the ball... \nQuestion: __${question}__`)
-							.setDescription(fortunes[Math.floor(Math.random() * fortunes.length)])
+							.setDescription('Answer:' + fortune)
 							message.channel.send({embed})
 						} else
 							if(message.content.startsWith(prefix + "coinflip")) {
