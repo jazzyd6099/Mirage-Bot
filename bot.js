@@ -217,8 +217,7 @@ client.on('message', async(message) => {
 							}});
 					}else
 						if(message.content.startsWith(prefix + "8ball")) {
-							let question = args.slice(1).join(' ')
-    							if (!question) return message.channel.send("You need to provide a question for the mighty 8ball!");
+							
 							message.channel.send({embed: {
             		        color: embedPurple,
             		        title: "Looking into the ball...",
